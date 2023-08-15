@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PokemonServiceProtocol {
-    func getPokemonsList(completion: @escaping (PokemonCompletion))
+    func getPokemonsList(completion: @escaping PokemonCompletion)
 }

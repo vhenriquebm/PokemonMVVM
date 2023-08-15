@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Pokemon: Codable {
+struct PokemonRequest: Codable {
     let attack, defense: Int?
     let description: String?
-    let evolutionChain: [EvolutionChain]?
+    let evolutionChain: [EvolutionChainRequest]?
     let height, id: Int?
     let imageURL: String?
     let name, type: String?
@@ -23,13 +23,15 @@ struct Pokemon: Codable {
     }
 }
 
-struct EvolutionChain: Codable {
+struct EvolutionChainRequest: Codable {
     let id, name: String?
 }
 
-typealias PokemonList = [Pokemon?]
+typealias PokemonRequestList = [PokemonRequest?]
 
-
-
+struct Pokemon: Codable {
+    let request: PokemonRequest?
+    let image: Data?
+}
 
 

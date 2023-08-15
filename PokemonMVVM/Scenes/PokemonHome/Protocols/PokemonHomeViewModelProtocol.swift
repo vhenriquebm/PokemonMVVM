@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PokemonHomeViewModelProtocol {
-    func getPokemonsList()
+    func getPokemonsList(completion: @escaping ([Pokemon]) -> ())
 }
